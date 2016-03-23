@@ -1,0 +1,36 @@
+/* line 4, ../../sass/module/carousel.scss */
+.carousel-wrap {
+  position: relative;
+  margin: 20px auto;
+}
+/* line 8, ../../sass/module/carousel.scss */
+.carousel-wrap .carousel {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+/* line 14, ../../sass/module/carousel.scss */
+.carousel-wrap .carousel .carousel-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -moz-transition-duration: 1.5s;
+  -o-transition-duration: 1.5s;
+  -webkit-transition-duration: 1.5s;
+  transition-duration: 1.5s;
+}
+/* line 21, ../../sass/module/carousel.scss */
+.carousel-wrap .carousel .carousel-view .image-wrap {
+  display: inline-block;
+  background: url("//www.chimply.com/coconut/images/967471") no-repeat 50% 50%;
+}
+/* line 25, ../../sass/module/carousel.scss */
+.carousel-wrap .carousel .carousel-view .image-wrap img {
+  width: 100%;
+  height: 100%;
+}

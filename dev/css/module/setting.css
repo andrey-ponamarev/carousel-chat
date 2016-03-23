@@ -1,0 +1,24 @@
+/* line 4, ../../sass/module/setting.scss */
+.settings {
+  padding: 0 20px;
+}
+/* line 7, ../../sass/module/setting.scss */
+.settings .option-header {
+  margin: 20px 0;
+  text-decoration: underline;
+}
+/* line 12, ../../sass/module/setting.scss */
+.settings input {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+}
+/* line 18, ../../sass/module/setting.scss */
+.settings button {
+  margin: 10px auto;
+  display: block;
+}
+/* line 22, ../../sass/module/setting.scss */
+.settings .settings-option {
+  margin: 10px 20px;
+}

@@ -1,0 +1,20 @@
+/* line 4, ../../sass/module/nav.scss */
+nav {
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+}
+/* line 14, ../../sass/module/nav.scss */
+nav a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+  background: #673ab7;
+  padding: 15px;
+  -webkit-flex: 1 1 130px;
+  flex: 1 1 130px;
+}

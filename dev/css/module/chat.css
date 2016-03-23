@@ -1,0 +1,71 @@
+/* line 4, ../../sass/module/chat.scss */
+.chat {
+  height: 100%;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+/* line 7, ../../sass/module/chat.scss */
+.chat nav {
+  -webkit-flex: 0 0 52px;
+  flex: 0 0 52px;
+}
+/* line 16, ../../sass/module/chat.scss */
+.chat .chat-dialog {
+  padding: 20px;
+  overflow-y: auto;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+/* line 22, ../../sass/module/chat.scss */
+.chat .chat-dialog ul li {
+  position: relative;
+  margin-top: 30px;
+  background: #fff;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+  float: left;
+  text-align: left;
+  clear: both;
+}
+/* line 33, ../../sass/module/chat.scss */
+.chat .chat-dialog ul li.my-message {
+  float: right;
+  text-align: right;
+}
+/* line 37, ../../sass/module/chat.scss */
+.chat .chat-dialog ul li.my-message i {
+  left: auto;
+  right: 0;
+}
+/* line 43, ../../sass/module/chat.scss */
+.chat .chat-dialog ul li i {
+  font-size: 75%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  height: 20px;
+}
+/* line 53, ../../sass/module/chat.scss */
+.chat .chat-control {
+  margin: 20px;
+  -webkit-flex: 0 0 40px;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex: 0 0 40px;
+  display: flex;
+  flex-direction: row;
+}
+/* line 62, ../../sass/module/chat.scss */
+.chat .chat-control .message-content {
+  border-radius: 5px 0 0 5px;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+/* line 68, ../../sass/module/chat.scss */
+.chat .chat-control .send-message {
+  border-radius: 0 5px 5px 0;
+  border: none;
+}

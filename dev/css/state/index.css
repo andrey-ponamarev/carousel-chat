@@ -1,0 +1,6 @@
+/* line 4, ../../sass/state/index.scss */
+a.active {
+  color: #fff;
+  background: #7446c4;
+  border-bottom: 4px solid #AD1457;
+}

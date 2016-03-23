@@ -1,0 +1,41 @@
+@import "compass";
+@import "../theme/index";
+
+.carusel-controls {
+  span {
+    position: absolute;
+    top: 0;
+    width: $arrows-size;
+    height: 100%;
+
+    &.arrow-left {
+      left: $arrows-position;
+    }
+
+    &.arrow-right {
+      right: $arrows-position;
+    }
+
+    a {
+      @include transition-property(opacity, background);
+      @include transition-duration(0.3s);
+
+      font-weight: bold;
+      box-shadow: $shadow;
+      height: $arrows-size;
+      width: $arrows-size;
+      line-height: $arrows-size;
+      margin-top: -$arrows-size/2;
+      text-align: center;
+      background: #fff;
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      &:hover {
+        color: #fff;
+        background: rgba(0,0,0, 0.3);
+      }
+    }
+  }
+}

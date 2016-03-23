@@ -1,0 +1,8 @@
+@import "compass";
+@import "../theme/index";
+
+a.active {
+    color: $color-light;
+    background: lighten($primary-bg, 5%);
+    border-bottom: 4px solid #AD1457;
+}

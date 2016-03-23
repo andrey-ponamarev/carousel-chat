@@ -1,0 +1,73 @@
+@import "compass/css3";
+@import "../theme/index";
+
+.chat {
+  height: 100%;
+
+  nav {
+    @include flex(0 0 52px);
+  }
+
+  @include flexbox((
+          display: flex,
+          flex-direction: column
+  ));
+
+  .chat-dialog {
+    padding: 20px;
+    overflow-y: auto;
+    min-height: 0;
+    flex: 1 1 auto;
+
+    ul li {
+      position: relative;
+      margin-top: 30px;
+      background: #fff;
+      border: 1px solid;
+      padding: 10px;
+      border-radius: 5px;
+      float: left;
+      text-align: left;
+      clear: both;
+
+      &.my-message{
+        float: right;
+        text-align: right;
+
+        i {
+          left: auto;
+          right: 0;
+        }
+      }
+
+      i {
+        font-size: 75%;
+        position: absolute;
+        top: -20px;
+        left: 0;
+        height: 20px;
+      }
+    }
+  }
+
+  .chat-control {
+    margin: 20px;
+
+    @include flexbox((
+            flex: 0 0 40px,
+            display: flex,
+            flex-direction: row
+    ));
+
+    .message-content {
+      border-radius: 5px 0 0 5px;
+      @include flexbox((
+              flex: 1 1 auto
+      ));
+    }
+    .send-message {
+      border-radius: 0 5px 5px 0;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+/* line 3, ../../sass/base/index.scss */
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+@media (min-width: 640px) {
+  /* line 3, ../../sass/base/index.scss */
+  html,
+  body {
+    width: 640px;
+  }
+}
+
+/* line 15, ../../sass/base/index.scss */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 20, ../../sass/base/index.scss */
+li {
+  list-style: none;
+}
+
+/* line 24, ../../sass/base/index.scss */
+input[type="text"],
+button {
+  padding: 10px 15px;
+  font-size: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  border: 1px solid #ccc;
+}
+
+/* line 33, ../../sass/base/index.scss */
+button {
+  color: #fff;
+  background: #673ab7;
+  border: 1px solid #673ab7;
+}
+
+/* line 39, ../../sass/base/index.scss */
+body div {
+  box-sizing: border-box;
+}
+
+/* line 43, ../../sass/base/index.scss */
+a {
+  color: #333;
+}

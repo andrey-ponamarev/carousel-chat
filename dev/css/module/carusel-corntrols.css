@@ -1,0 +1,48 @@
+/* line 5, ../../sass/module/carusel-corntrols.scss */
+.carusel-controls a {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  opacity: 0.3;
+  -moz-transition-property: opacity, background;
+  -o-transition-property: opacity, background;
+  -webkit-transition-property: opacity, background;
+  transition-property: opacity, background;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 14, ../../sass/module/carusel-corntrols.scss */
+.carusel-controls a:hover {
+  opacity: 1;
+  background: none;
+}
+/* line 17, ../../sass/module/carusel-corntrols.scss */
+.carusel-controls a:hover i {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+}
+/* line 23, ../../sass/module/carusel-corntrols.scss */
+.carusel-controls a.arrow-left {
+  left: 0;
+}
+/* line 27, ../../sass/module/carusel-corntrols.scss */
+.carusel-controls a.arrow-right {
+  right: 0;
+}
+/* line 31, ../../sass/module/carusel-corntrols.scss */
+.carusel-controls a i {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  margin-top: -25px;
+  margin-left: 5px;
+  text-align: center;
+  background: #fff;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+}

@@ -1,0 +1,8 @@
+// Chat
+export const MESSAGE_SEND = 'MESSAGE_SEND';
+export const MESSAGE_RECEIVE = 'MESSAGE_RECEIVE';
+export const CHANGE_USER_NAME= 'CHANGE_USER_NAME';
+
+// Carousel
+export const SHOW_SLIDE = 'SHOW_SLIDE';
+export const CHANGE_CAROUSEL_SIZE = 'CHANGE_CAROUSEL_SIZE';

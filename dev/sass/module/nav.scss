@@ -1,0 +1,25 @@
+@import "compass/css3";
+@import "../theme/index";
+
+nav {
+  width: 100%;
+  text-align: center;
+  box-shadow: $shadow;
+
+  @include flexbox((
+          display: flex,
+          flex-direction: row
+  ));
+
+  a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $color-light;
+    background: $primary-bg;
+    padding: 15px;
+
+    @include flexbox((
+            flex: 1 1 130px
+    ));
+  }
+}
