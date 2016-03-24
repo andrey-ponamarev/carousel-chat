@@ -2,6 +2,12 @@
 
 Steps for running:
 ```
+git clone https://github.com/andrey-ponamarev/carousel-chat.git
+```
+```
+cd clone carousel-chat
+```
+```
 npm i
 ```
 ```
