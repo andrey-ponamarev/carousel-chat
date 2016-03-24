@@ -64,12 +64,35 @@ nav {
   width: 100%;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: relative;
   display: -webkit-flex;
   -webkit-flex-direction: row;
   display: flex;
   flex-direction: row;
 }
 /* line 14, ../sass/module/nav.scss */
+nav .new-message {
+  position: absolute;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  display: block;
+  width: 20px;
+  font-size: 50%;
+  height: 20px;
+  line-height: 20px;
+  top: 50%;
+  left: 10px;
+  margin-top: -10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+/* line 37, ../sass/module/nav.scss */
 nav a {
   text-transform: capitalize;
   text-decoration: none;
@@ -80,7 +103,7 @@ nav a {
   flex: 1 1 130px;
 }
 
-/* line 4, ../sass/module/chat.scss */
+/* line 11, ../sass/module/chat.scss */
 .chat {
   height: 100%;
   display: -webkit-flex;
@@ -88,41 +111,86 @@ nav a {
   display: flex;
   flex-direction: column;
 }
-/* line 7, ../sass/module/chat.scss */
+/* line 14, ../sass/module/chat.scss */
 .chat nav {
+  position: relative;
   -webkit-flex: 0 0 52px;
   flex: 0 0 52px;
 }
-/* line 16, ../sass/module/chat.scss */
+/* line 24, ../sass/module/chat.scss */
 .chat .chat-dialog {
   padding: 20px;
   overflow-y: auto;
   min-height: 0;
   flex: 1 1 auto;
 }
-/* line 22, ../sass/module/chat.scss */
+/* line 30, ../sass/module/chat.scss */
 .chat .chat-dialog ul li {
   position: relative;
   margin-top: 30px;
   background: #fff;
   border: 1px solid;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   float: left;
   text-align: left;
   clear: both;
 }
-/* line 33, ../sass/module/chat.scss */
+/* line 41, ../sass/module/chat.scss */
+.chat .chat-dialog ul li:before, .chat .chat-dialog ul li:after {
+  right: 100%;
+  top: 11px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 53, ../sass/module/chat.scss */
+.chat .chat-dialog ul li:after {
+  border-width: 8px;
+  margin-top: -8px;
+  border-color: transparent;
+  border-right-color: #fff;
+}
+/* line 59, ../sass/module/chat.scss */
+.chat .chat-dialog ul li:before {
+  border-width: 9px;
+  margin-top: -9px;
+  border-color: transparent;
+  border-right-color: #000;
+}
+/* line 64, ../sass/module/chat.scss */
 .chat .chat-dialog ul li.my-message {
   float: right;
   text-align: right;
 }
-/* line 37, ../sass/module/chat.scss */
+/* line 68, ../sass/module/chat.scss */
+.chat .chat-dialog ul li.my-message:before, .chat .chat-dialog ul li.my-message:after {
+  right: auto;
+  left: 100%;
+}
+/* line 74, ../sass/module/chat.scss */
+.chat .chat-dialog ul li.my-message:after {
+  border-width: 8px;
+  margin-top: -8px;
+  border-color: transparent;
+  border-left-color: #fff;
+}
+/* line 79, ../sass/module/chat.scss */
+.chat .chat-dialog ul li.my-message:before {
+  border-width: 9px;
+  margin-top: -9px;
+  border-color: transparent;
+  border-left-color: #000;
+}
+/* line 84, ../sass/module/chat.scss */
 .chat .chat-dialog ul li.my-message i {
   left: auto;
   right: 0;
 }
-/* line 43, ../sass/module/chat.scss */
+/* line 90, ../sass/module/chat.scss */
 .chat .chat-dialog ul li i {
   font-size: 75%;
   position: absolute;
@@ -130,7 +198,7 @@ nav a {
   left: 0;
   height: 20px;
 }
-/* line 53, ../sass/module/chat.scss */
+/* line 100, ../sass/module/chat.scss */
 .chat .chat-control {
   margin: 20px;
   -webkit-flex: 0 0 40px;
@@ -140,13 +208,13 @@ nav a {
   display: flex;
   flex-direction: row;
 }
-/* line 62, ../sass/module/chat.scss */
+/* line 109, ../sass/module/chat.scss */
 .chat .chat-control .message-content {
   border-radius: 5px 0 0 5px;
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
 }
-/* line 68, ../sass/module/chat.scss */
+/* line 115, ../sass/module/chat.scss */
 .chat .chat-control .send-message {
   border-radius: 0 5px 5px 0;
   border: none;
@@ -240,20 +308,24 @@ nav a {
 /* line 7, ../sass/module/setting.scss */
 .settings .option-header {
   margin: 20px 0;
-  text-decoration: underline;
+  border-bottom: 1px silver;
 }
-/* line 12, ../sass/module/setting.scss */
+/* line 11, ../sass/module/setting.scss */
+.settings .option-header span {
+  margin-right: 10px;
+}
+/* line 16, ../sass/module/setting.scss */
 .settings input {
   box-sizing: border-box;
   width: 100%;
   margin: 10px 0;
 }
-/* line 18, ../sass/module/setting.scss */
+/* line 22, ../sass/module/setting.scss */
 .settings button {
   margin: 10px auto;
   display: block;
 }
-/* line 22, ../sass/module/setting.scss */
+/* line 26, ../sass/module/setting.scss */
 .settings .settings-option {
   margin: 10px 20px;
 }

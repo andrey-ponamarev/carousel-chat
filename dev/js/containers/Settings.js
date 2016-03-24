@@ -32,7 +32,7 @@ class Option extends Component {
     constructor(){
         super();
         this.state = {
-            collapse: true
+            collapse: false
         }
     }
     toggleClass(){
@@ -44,7 +44,7 @@ class Option extends Component {
             <div className="settings-option">
                 <h3 onClick={this.toggleClass.bind(this)}
                     className="option-header">
-                    {this.state.collapse ? <span>&rarr;</span> : <span>&darr;</span>}
+                    {this.state.collapse ? <span>&#9654;</span> : <span>&#9662;</span>}
                     {this.props.title}</h3>
                 {
                     !this.state.collapse ?

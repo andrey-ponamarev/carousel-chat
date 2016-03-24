@@ -1,8 +1,17 @@
-import { MESSAGE_SEND, MESSAGE_RECEIVE, CHANGE_USER_NAME } from '../constants/';
+import { MESSAGE_SEND, MESSAGE_RECEIVE, CHANGE_USER_NAME , NEW_MESSAGE_RECEIVE} from '../constants/';
 
 const initialState = {
     messages: [],
-    user: 'Andrew'
+    user: 'Andrew',
+    newMessages: 0
+};
+
+const newMessage = (state, newMessages) => {
+    return Object.assign({}, state, {
+        messages: [...state.messages, {
+            newMessages
+        }]
+    })
 };
 
 const sendMessage = (state, message, isMyMessage = null) => {
@@ -42,6 +51,8 @@ const changeUserName = (state, user) => {
 
 export default function chat(state = initialState, action = {}) {
     switch (action.type) {
+        case NEW_MESSAGE_RECEIVE:
+            return newMessage(state, action.newMessages);
         case MESSAGE_SEND:
             return sendMessage(state, action.message, action.isMyMessage);
         case MESSAGE_RECEIVE:

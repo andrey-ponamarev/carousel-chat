@@ -1,4 +1,4 @@
-import { MESSAGE_SEND, MESSAGE_RECEIVE, CHANGE_USER_NAME} from '../constants/';
+import { MESSAGE_SEND, MESSAGE_RECEIVE, CHANGE_USER_NAME, NEW_MESSAGE_RECEIVE} from '../constants/';
 
 export const sendMessage = (message, isMyMessage) => {
     return {
@@ -19,5 +19,12 @@ export const changeName = (user) => {
     return {
         type: CHANGE_USER_NAME,
         user
+    }
+};
+
+export const newMessage = (newMessages) => {
+    return {
+        type: NEW_MESSAGE_RECEIVE,
+        newMessages
     }
 };

@@ -3,12 +3,35 @@ nav {
   width: 100%;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: relative;
   display: -webkit-flex;
   -webkit-flex-direction: row;
   display: flex;
   flex-direction: row;
 }
 /* line 14, ../../sass/module/nav.scss */
+nav .new-message {
+  position: absolute;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  display: block;
+  width: 20px;
+  font-size: 50%;
+  height: 20px;
+  line-height: 20px;
+  top: 50%;
+  left: 10px;
+  margin-top: -10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+/* line 37, ../../sass/module/nav.scss */
 nav a {
   text-transform: capitalize;
   text-decoration: none;

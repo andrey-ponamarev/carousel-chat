@@ -1,10 +1,18 @@
 @import "compass/css3";
 @import "../theme/index";
 
+$arrow-width: 8px;
+@mixin message-arrows($width) {
+  border-width: $width;
+  margin-top: -$width;
+  border-color: transparent;
+}
+
 .chat {
   height: 100%;
 
   nav {
+    position: relative;
     @include flex(0 0 52px);
   }
 
@@ -25,14 +33,53 @@
       background: #fff;
       border: 1px solid;
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 3px;
       float: left;
       text-align: left;
       clear: both;
 
+      &:before,
+      &:after{
+        right: 100%;
+        top: $arrow-width + 3;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      &:after {
+        @include message-arrows($arrow-width);
+        border-right-color: #fff;
+
+      }
+
+      &:before {
+        @include message-arrows($arrow-width + 1);
+        border-right-color: #000;
+      }
+
       &.my-message{
         float: right;
         text-align: right;
+
+        &:before,
+        &:after{
+          right: auto;
+          left: 100%;
+        }
+
+        &:after {
+          @include message-arrows($arrow-width);
+          border-left-color: #fff;
+        }
+
+        &:before {
+          @include message-arrows($arrow-width + 1);
+          border-left-color: #000;
+        }
 
         i {
           left: auto;

@@ -79,7 +79,6 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'dist/js/bundle.min.js': 'dev/js/app.js'
-                    //'server/public/app.js': 'server/client/app.js'
                 }
             }
         },

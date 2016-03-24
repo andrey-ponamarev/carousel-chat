@@ -2,6 +2,7 @@
 export const MESSAGE_SEND = 'MESSAGE_SEND';
 export const MESSAGE_RECEIVE = 'MESSAGE_RECEIVE';
 export const CHANGE_USER_NAME= 'CHANGE_USER_NAME';
+export const NEW_MESSAGE_RECEIVE= 'NEW_MESSAGE_RECEIVE';
 
 // Carousel
 export const SHOW_SLIDE = 'SHOW_SLIDE';
